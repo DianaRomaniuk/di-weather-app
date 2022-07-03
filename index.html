@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>WeatherAppDi</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- styles.css -->
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="main">
+      <section class="weatherapp">
+        <div class="container">
+          <div class="row-first">
+            <!-- First container -->
+            <div class="col-sm container-first">
+              <form id="formaa">
+                <!-- First Container // First Row -->
+                <div class="row form-group">
+                  <div class="col-sm-6 form-group-item" id="form-group-item">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your city"
+                      id="form-input"
+                    />
+                  </div>
+
+                  <!-- Search and Current button -->
+                  <div class="col-sm-3 form-group-item">
+                    <input type="submit" value="Search" class="search-btn" />
+                  </div>
+                  <div class="col-sm-3 form-group-item">
+                    <button class="current-btn" id="current-btn">
+                      Current
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- First Container // Second Row // Today Weather -->
+              <div class="row today-weather">
+                <div class="col-6 col-md today-weather-item">
+                  <h1 id="heading"></h1>
+                  <p class="today-weather-item-day-hour">
+                    <!-- Today -->
+                    <span id="today-weather-item-day-hour"> </span>
+                  </p>
+                  <p class="weather-description" id="weather-description"></p>
+                </div>
+                <div class="col-6 col-md today-weather-item test-second">
+                  <!-- IMG TO CHANGE -->
+                  <img
+                    src="http://openweathermap.org/img/wn/01d@2x.png"
+                    alt="main-icon"
+                    class="main-icon"
+                    id="main-icon"
+                  />
+                  <p class="current-temp p-3">
+                    <span class="temperature" id="today-temperature"></span>
+                    <span class="units">
+                      <a href="#" id="celsius-link" class="active"> °C </a> |
+                      <a href="#" id="fahrenheit-link" class="active"> F </a>
+                    </span>
+                  </p>
+                </div>
+                <div class="col-6 col-md today-weather-item">
+                  <p>Feels like: <span id="tempFeels"></span><span>°C</span></p>
+                  <p>Humadity: <span id="humidity"> </span><span>%</span></p>
+                  <p>Wind: <span id="windSpeed">7</span> <span>km/h</span></p>
+                </div>
+              </div>
+              <!-- First Container // Third Row // Forecast Weather  -->
+              <div class="row forecast-weather" id="forecast">
+                <div class="row"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- footer -->
+    <p class="source">
+      <a href="" target="_blank">Open-source code</a>,
+      <span class="authorsname">by Diana Romaniuk</span>
+    </p>
+    <script src="src/index.js"></script>
+  </body>
+</html>
